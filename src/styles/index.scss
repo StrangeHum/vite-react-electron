@@ -4,5 +4,6 @@ h1 {
   color: $prop;
   &:hover {
     color: aqua;
+    size: 20;
   }
 }
