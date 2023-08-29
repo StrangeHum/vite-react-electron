@@ -1,0 +1,60 @@
+{
+  "name": "vite-react-electron",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "dev-app": "npx electromon .",
+    "build": "vite build",
+    "build-app": "vite build & npx electron-builder"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.15.0",
+    "react-router-dom": "^6.15.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "electromon": "^1.0.10",
+    "electron": "^26.1.0",
+    "electron-builder": "^24.6.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "sass": "^1.66.1",
+    "vite": "^4.4.5"
+  },
+  "build": {
+    "appId": "electron-react-app",
+    "win": {
+      "icon": "build/brow-icon.ico",
+      "target": "nsis"
+    },
+    "files": [
+      "dist/**/*",
+      "build/**/*",
+      "electron/main.cjs",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "nsis": {
+      "installerIcon": "build/brow-icon.ico",
+      "installerHeaderIcon": "build/brow-icon.ico",
+      "uninstallDisplayName": "uninstall this app",
+      "license": "license.txt",
+      "oneClick": "false",
+      "allowToChangeInstallationDirectory": "true",
+      "deleteAppDataOnUninstall": true
+    },
+    "directories": {
+      "output": "realeases",
+      "buildResources": "dist"
+    }
+  }
+}
