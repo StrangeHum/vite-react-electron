@@ -2,4 +2,7 @@ $prop: blue;
 
 h1 {
   color: $prop;
+  &:hover {
+    color: aqua;
+  }
 }
