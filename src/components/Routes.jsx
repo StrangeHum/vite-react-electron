@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import Setting from "./settings.jsx";
-import MainMenu from "./Main-menu.jsx";
-import Scripts from "./Scripts.jsx";
-import GlobalEvents from "./Global-events.jsx";
+import Setting from "./settings-page/settings.jsx";
+import MainMenu from "./main-menu/Main-menu.jsx";
+import Scripts from "./scripts-page/Scripts.jsx";
+import GlobalEvents from "./global-events/Global-events.jsx";
 
 function App() {
   return (

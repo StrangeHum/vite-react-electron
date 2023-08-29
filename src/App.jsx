@@ -1,9 +1,8 @@
 // import "./App.css";
 //TODO: test
-import "./styles/index.scss";
 import { HashRouter, useLocation } from "react-router-dom";
 
-import SHNavbar from "./components/Navbar.jsx";
+import Header from "./components/header/Header.jsx";
 import SHRoute from "./components/Routes.jsx";
 
 function Foo() {
@@ -16,9 +15,7 @@ function App() {
   return (
     <>
       <HashRouter>
-        <div className="navbar">
-          <SHNavbar />
-        </div>
+        <Header />
         <Foo />
         <SHRoute />
       </HashRouter>
