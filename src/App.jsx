@@ -10,6 +10,37 @@ function Foo() {
   return <span>Path : {location.pathname}</span>;
 }
 
+function Counter() {
+  const n = 0;
+  let count = n;
+  return (
+    <>
+      <a>{count}</a>
+      <button
+        onClick={() => {
+          count += 1;
+        }}
+      >
+        +
+      </button>
+      <button
+        onClick={() => {
+          count = n;
+        }}
+      >
+        обнулить
+      </button>
+      <button
+        onClick={() => {
+          count -= 1;
+        }}
+      >
+        -
+      </button>
+    </>
+  );
+}
+
 function App() {
   return (
     <>

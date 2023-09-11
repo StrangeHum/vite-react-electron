@@ -1,6 +1,5 @@
 import Navbar from "./Navbar.jsx";
 import "./header.scss";
-import Shimage from "/round-tab-icon--raccoon.png";
 import SCV from "/react.svg";
 function Header() {
   return (
