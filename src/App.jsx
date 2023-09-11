@@ -1,5 +1,6 @@
 import "./styles/App.scss";
 import { HashRouter, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 import Header from "./components/header/header.jsx";
 import SHRoute from "./components/Routes.jsx";
@@ -11,28 +12,29 @@ function Foo() {
 }
 
 function Counter() {
-  const n = 0;
-  let count = n;
+  const val = 0;
+  const [count, setCount] = useState(val);
+
   return (
     <>
       <a>{count}</a>
       <button
         onClick={() => {
-          count += 1;
+          setCount(count + 1);
         }}
       >
         +
       </button>
       <button
         onClick={() => {
-          count = n;
+          setCount(val);
         }}
       >
         обнулить
       </button>
       <button
         onClick={() => {
-          count -= 1;
+          setCount(count - 1);
         }}
       >
         -
@@ -48,6 +50,7 @@ function App() {
         <Header />
         <Foo />
         <SHRoute />
+        <Counter />
       </HashRouter>
     </>
   );
