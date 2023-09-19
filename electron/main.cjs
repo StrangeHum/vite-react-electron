@@ -12,8 +12,8 @@ function createWindow() {
     autoHideMenuBar: true,
   });
   win.webContents.openDevTools();
-  // win.loadFile(path.join(app.getAppPath(), "dist/index.html"));
-  win.loadURL("http://127.0.0.1:3002/");
+  win.loadFile(path.join(app.getAppPath(), "dist/index.html"));
+  //win.loadURL("http://127.0.0.1:3002/");
 }
 
 app.whenReady().then(() => {
