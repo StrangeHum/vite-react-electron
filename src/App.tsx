@@ -1,10 +1,9 @@
 import "./styles/App.scss";
 import { HashRouter } from "react-router-dom";
-import React from "react";
 
-import Header from "./components/header/header.jsx";
-import SHRoute from "./components/Routes.jsx";
-import { SHLocation } from "./components/SHLocation";
+import Header from "./components/header/header.tsx";
+import { Pages } from "./components/Pages.tsx";
+import { SHLocation } from "./components/SHLocation.jsx";
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
       <HashRouter>
         <Header />
         <SHLocation />
-        <SHRoute />
+        <Pages />
       </HashRouter>
     </>
   );
