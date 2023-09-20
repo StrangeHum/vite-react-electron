@@ -1,0 +1,6 @@
+declare module "*.svg" {
+  import React = require("react");
+  export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>; //Создаёт импрорт import {ReactComponent as value} from...
+  const src: string;
+  export default src; //Создаёт базовый импорт import value from...
+}

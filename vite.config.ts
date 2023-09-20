@@ -11,7 +11,7 @@ export default defineConfig({
     //Позволяет прописывать путь "@src/...", тоесть прокидывает пути
     alias: {
       //даёт доступ файлам в формате "{value}/файл"
-      "@src": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
   server: {
