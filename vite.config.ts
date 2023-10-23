@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
-import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,8 +9,8 @@ export default defineConfig({
   resolve: {
     //Позволяет прописывать путь "@src/...", тоесть прокидывает пути
     alias: {
-      //даёт доступ файлам в формате "{value}/файл"
-      "@": path.resolve(__dirname, "./src"),
+      src: "/src",
+      types: "/src/types",
     },
   },
   server: {

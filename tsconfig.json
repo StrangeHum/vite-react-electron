@@ -18,9 +18,19 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    // Custom
+    "types": ["vite-plugin-svgr/client"],
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "types/*": ["src/types/*"]
+    }
   },
-  "include": ["src/components", "src/custom.d.ts"],
-  // "include": ["src"],
+  "include": ["src"],
+  // "include": ["src/components", "src/custom.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
+
+  //custom
 }
