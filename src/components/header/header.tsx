@@ -1,6 +1,6 @@
 import Navbar from "./Navbar.jsx";
 import "./header.scss";
-import { ReactComponent as SCV } from "@/public/brow-icon.svg";
+import { ReactComponent as SCV } from "src/public/brow-icon.svg";
 
 function Header() {
   return (

@@ -5,31 +5,28 @@ import { HashRouter } from "react-router-dom";
 // import { Pages } from "./components/Pages.tsx";
 // import { SHLocation } from "./components/SHLocation.tsx";
 
-// import { RightSideTest } from "./components/RightSideTest";
-// import { Script, SHAction } from "types/scriptTypes";
-
-import { TodoList } from "./components/TodoList";
+import { Script, SHAction } from "types/scriptTypes";
+import { Scripts } from "./components/scripts-page/Scripts";
 
 function App() {
-  // const action: SHAction = {
-  //   name: "tt",
-  //   action: "ee",
-  // };
+  const action: SHAction = {
+    name: "tt",
+    action: "ee",
+  };
 
-  // const script: Script = {
-  //   name: "Start",
-  //   arrayActions: [action],
-  // };
+  const script: Script = {
+    name: "Start",
+    arrayActions: [action],
+  };
+  //
   return (
     <>
       <HashRouter>
-        <TodoList title="text" list={["1", "2", "3"]} />
-        <TodoList title="Valyu" list={["react", "vite"]} />
-        {/* <Header /> */}
-        {/* <SHLocation /> */}
-        {/* <Pages /> */}
-
-        {/* <RightSideTest /> */}
+        {/* <Header />
+        <SHLocation />
+        <Pages /> */}
+        
+        <Scripts script={script}/>
       </HashRouter>
     </>
   );
