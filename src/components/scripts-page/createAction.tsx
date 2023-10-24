@@ -1,23 +1,32 @@
 import React, { useRef } from "react";
 
-export const createAction = () => {
-  const inputData1 = useRef();
-  const createVal = () => {
-    let temp: SHAction = {
-      name: String(count),
-      action: "",
-    };
-    setCount((prew) => prew + 1);
-    setState((old) => [...old, temp]);
-  };
+interface input {
+  createVal: Function;
+  deleteVal: Function;
+}
 
-  const deleteVal = (name: string) => {
-    setState((old) => old.filter((item) => item.name != name));
-  };
+export const createAction = ({ createVal, deleteVal }: input) => {
+  const inputData1 = useRef<HTMLInputElement>(null);
+
   return (
     <>
-      <input type="text" ref={inputData1.current}></input>
-      <button onClick={}></button>
+      <input type="text" ref={inputData1} />
+
+      <button
+        onClick={() => {
+          createVal(inputData1.current!.value, "action");
+        }}
+      >
+        create
+      </button>
+
+      <button
+        onClick={() => {
+          deleteVal(inputData1.current!.value);
+        }}
+      >
+        delete
+      </button>
     </>
   );
 };
