@@ -25,8 +25,8 @@ function App() {
         {/* <Header />
         <SHLocation />
         <Pages /> */}
-        
-        <Scripts script={script}/>
+
+        <Scripts script={script} />
       </HashRouter>
     </>
   );
